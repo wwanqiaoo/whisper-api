@@ -2,18 +2,13 @@ Flask==3.1.0
 flask-cors==5.0.1
 Flask-SQLAlchemy==3.1.1
 gunicorn
-
-openai-whisper==20240930
-torch==2.7.0
-pydub==0.25.1
-ffmpeg-python==0.2.0
-
-spacy==3.8.5
-spacy_pkuseg==1.0.0
-
-zh_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/zh_core_web_sm-3.8.0/zh_core_web_sm-3.8.0-py3-none-any.whl
-en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
-
+openai-whisper
+torch
+pydub
+ffmpeg-python
+spacy
+spacy_pkuseg
 requests
 langdetect
 dateparser
+pytz

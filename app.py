@@ -15,8 +15,23 @@ import re
 import pytz
 
 
+def download_models():
+    try:
+        spacy.load("zh_core_web_sm")
+    except:
+        os.system("python -m spacy download zh_core_web_sm")
+
+    try:
+        spacy.load("en_core_web_sm")
+    except:
+        os.system("python -m spacy download en_core_web_sm")
+
+download_models()
+
 nlp_zh = spacy.load("C:/Users/User/voice-memo-assistant/zh_text_categorizer_model")
 nlp_en = spacy.load("C:/Users/User/voice-memo-assistant/en_text_categorizer_model")
+
+
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///memo.db'
