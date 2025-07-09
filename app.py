@@ -39,7 +39,7 @@ db = SQLAlchemy(app)
 CORS(app)
 
 # Load Whisper model
-model = whisper.load_model("base")
+model = whisper.load_model("tiny")
 
 class Memo(db.Model):
     __tablename__ = 'memo'
