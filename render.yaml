@@ -1,10 +1,10 @@
 services:
-  - type: web
-    name: whisper-api
+  - name: whisper-api
+    type: web
     env: python
     plan: free
-    buildCommand: >
-      pip install -r requirements.txt
-    startCommand: >
-      gunicorn app:app
+    region: singapore
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
     pythonVersion: 3.10
+    autoDeploy: true
