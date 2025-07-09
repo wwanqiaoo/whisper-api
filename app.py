@@ -28,8 +28,8 @@ def download_models():
 
 download_models()
 
-nlp_zh = spacy.load("C:/Users/User/voice-memo-assistant/zh_text_categorizer_model")
-nlp_en = spacy.load("C:/Users/User/voice-memo-assistant/en_text_categorizer_model")
+nlp_zh = spacy.load("models/zh_text_categorizer_model")
+nlp_en = spacy.load("models/en_text_categorizer_model")
 
 
 
@@ -57,7 +57,7 @@ if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
 # API 地址为 PHP 后端地址，您可以根据需要修改
-PHP_API_URL = 'http://192.168.0.17:8000/login.php'
+PHP_API_URL = 'https://dcs5604.com/wanqiao/login.php'
 
 # 模拟登录功能（通过 PHP 后端验证）
 @app.route("/api/login", methods=["POST"])
@@ -637,4 +637,5 @@ def save_and_list_memos():
         return jsonify({'success': False, 'error': str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=False, host="0.0.0.0", port=port)

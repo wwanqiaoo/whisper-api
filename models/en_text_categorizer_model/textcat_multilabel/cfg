@@ -1,0 +1,14 @@
+{
+  "labels":[
+    "Work",
+    "Study",
+    "Daily",
+    "Others",
+    "Query_Today",
+    "Query_Tomorrow",
+    "Query_Custom",
+    "Delete_Specific",
+    "Delete_All"
+  ],
+  "threshold":0.5
+}

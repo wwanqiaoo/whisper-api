@@ -2,9 +2,5 @@ services:
   - type: web
     name: whisper-api
     env: python
-    plan: free
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.10.13
+    startCommand: gunicorn app:app --bind=0.0.0.0:$PORT

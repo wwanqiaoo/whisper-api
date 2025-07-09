@@ -1,0 +1,10 @@
+{
+  "labels":[
+    "Work",
+    "Study",
+    "Daily",
+    "Others"
+  ],
+  "threshold":0.0,
+  "positive_label":null
+}
